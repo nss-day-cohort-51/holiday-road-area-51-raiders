@@ -4,6 +4,10 @@
 
 import { ParkList } from "./parks/parkList.js";
 import { getParks } from "./parks/ParkDataManager.js";
+import { EateryList } from "./eateries/eateryList.js";
+import { getEateries } from "./eateries/EateryDataManager.js"
+import { AttractionList } from "./attractions/attractionList.js"
+import { getAttractions } from "./attractions/AttractionDataManager.js"
 
 const showParkList = () => {
 
@@ -15,3 +19,21 @@ const showParkList = () => {
 }
 
 showParkList();
+
+const showEateryList = () => {
+
+    const eateryElement = document.querySelector(".showEateryList")
+    getEateries()
+    .then((allEateries) => {
+        eateryElement.innerHTML = EateryList(allEateries)
+    })
+}
+
+const showAttractionList = () => {
+
+    const attElement = document.querySelector(".showAttList")
+    getAttractions()
+    .then((allAtt) => {
+        attElement.innerHTML = AttractionList(allAtt)
+    })
+}
