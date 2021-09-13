@@ -1,0 +1,16 @@
+body {
+    background-color: #299c92;
+    color: white;
+}
+
+.bodyText {
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    margin: 20px;
+    display: inline;
+    background-color: #FFF559;
+    padding: 15px;
+}
