@@ -3,37 +3,45 @@
 // park activities: https://developer.nps.gov/api/v1/activities?api_key=GtZH6PKdkUud9AMZrhhII6Ztg3sHJjAp3RTX3Ehh
 
 import { ParkList } from "./parks/parkList.js";
-import { getParks } from "./parks/ParkDataManager.js";
-import { EateryList } from "./eateries/eateryList.js";
-import { getEateries } from "./eateries/EateryDataManager.js"
-import { AttractionList } from "./attractions/attractionList.js"
-import { getAttractions } from "./attractions/AttractionDataManager.js"
+import { getParks, getStateArray, getStates } from "./parks/ParkDataManager.js";
+// import { EateryList } from "./eateries/eateryList.js";
+// import { getEateries } from "./eateries/EateryDataManager.js"
+// import { AttractionList } from "./attractions/attractionList.js"
+// import { getAttractions } from "./attractions/AttractionDataManager.js"
+import { showStateList } from "./stateDropDown.js";
 
-const showParkList = () => {
+const mainElement = document.querySelector("main");
+mainElement.addEventListener("change", (event) => {
+    if (event.target.id === "stateSelection"){
+        console.log('target', event.target.value);
+        buildStateList(event.target.value);
+    }
+})
 
-    const parkElement = document.querySelector(".showParkList")
-    getParks()
-    .then((allPark) => {
-        parkElement.innerHTML = ParkList(allPark);
+const buildStateList = (stateCode) => {
+    const parkElement = document.querySelector(".parkDisplay");
+    getParks(stateCode)
+    .then(allAPIParks => {
+        console.log('api', allAPIParks.data);
+
+        parkElement.innerHTML = ParkList(allAPIParks.data)
     })
 }
 
-showParkList();
+const startTrip = () => {
 
-const showEateryList = () => {
+    const stateElement = document.querySelector(".stateDisplay")
+    console.log('stateDisplay', stateElement)
 
-    const eateryElement = document.querySelector(".showEateryList")
-    getEateries()
-    .then((allEateries) => {
-        eateryElement.innerHTML = EateryList(allEateries)
-    })
+    if (getStateArray().length !== 0) {
+    console.log(getStateArray)
+    stateElement.innerHTML = showStateList(getStateArray())
+    } else {
+        getStates().then(statesResults => {
+            console.log("states", statesResults)
+            stateElement.innerHTML = showStateList(statesResults);
+        })
+    }
 }
 
-const showAttractionList = () => {
-
-    const attElement = document.querySelector(".showAttList")
-    getAttractions()
-    .then((allAtt) => {
-        attElement.innerHTML = AttractionList(allAtt)
-    })
-}
+startTrip();
