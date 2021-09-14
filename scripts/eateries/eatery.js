@@ -1,8 +1,8 @@
-export const eatery = (eatobj) => {
-    ` <section class="eatery" id="${eatobj.id}"></section>
-        <h3 class="eatery">${eatobj.name}</h3>
-    <p>${eatobj.city}, ${eatobj.state}</p>
-    <p>${eatobj.description}</p>
-    
-    `
+export const showEatery = (eateryArray) => {
+    const eateryDropDown = eateryArray.map(eatery => `<option value="${eatery.id}">${eatery.businessName}</option>`)
+    return `
+    <select id="eaterySelection">
+    <option value="none" selected disabled>Choose an Eatery</option>
+        ${eateryDropDown.join("")}
+    </select>`
 }
