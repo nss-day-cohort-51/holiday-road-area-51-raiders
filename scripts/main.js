@@ -9,8 +9,9 @@ import { getParks, getStateArray, getStates } from "./parks/ParkDataManager.js";
 import { getEateries } from "./eateries/EateryDataManager.js"
 import { showEatery } from "./eateries/eatery.js";
 // import { AttractionList } from "./attractions/attractionList.js"
-// import { getAttractions } from "./attractions/AttractionDataManager.js"
+import { getAttractions } from "./attractions/AttractionDataManager.js"
 import { showStateList } from "./stateDropDown.js";
+import { showAttraction } from "./attractions/attraction.js";
 
 const mainElement = document.querySelector("main");
 mainElement.addEventListener("change", (event) => {
@@ -39,6 +40,13 @@ const buildEateryDD = () => {
         console.log('api', allAPIEat);
 
         eateryElement.innerHTML = showEatery(allAPIEat)
+    })
+    const attElement = document.querySelector(".attDisplay");
+    getAttractions()
+    .then(allAPIAtt => {
+        console.log('api', allAPIAtt);
+
+        attElement.innerHTML = showAttraction(allAPIAtt)
     })
 }
 
