@@ -6,7 +6,8 @@
 import { Park } from "./parks/park.js";
 import { getParks, getStateArray, getStates } from "./parks/ParkDataManager.js";
 // import { EateryList } from "./eateries/eateryList.js";
-// import { getEateries } from "./eateries/EateryDataManager.js"
+import { getEateries } from "./eateries/EateryDataManager.js"
+import { showEatery } from "./eateries/eatery.js";
 // import { AttractionList } from "./attractions/attractionList.js"
 // import { getAttractions } from "./attractions/AttractionDataManager.js"
 import { showStateList } from "./stateDropDown.js";
@@ -29,6 +30,18 @@ const buildStateList = (stateCode) => {
     })
 }
 
+const buildEateryDD = () => {
+
+
+    const eateryElement = document.querySelector(".eateryDisplay");
+    getEateries()
+    .then(allAPIEat => {
+        console.log('api', allAPIEat);
+
+        eateryElement.innerHTML = showEatery(allAPIEat)
+    })
+}
+
 const startTrip = () => {
 
     const stateElement = document.querySelector(".stateDisplay")
@@ -43,6 +56,7 @@ const startTrip = () => {
             stateElement.innerHTML = showStateList(statesResults);
         })
     }
+    buildEateryDD();
 }
 
 startTrip();
