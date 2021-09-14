@@ -1,8 +1,8 @@
-export const attraction = (attobj) => {
-    ` <section class="attraction" id="${attobj.id}"></section>
-        <h3 class="attraction">${attobj.name}</h3>
-    <p>${attobj.city}, ${attobj.state}</p>
-    <p>${attobj.description}</p>
-    
-    `
+export const showAttraction = (attractionArray) => {
+    const attractionDropDown = attractionArray.map(att => `<option value="${att.id}">${att.name}</option>`)
+    return `
+    <select id="attractionSelection">
+    <option value="none" selected disabled>Choose an Attraction</option>
+        ${attractionDropDown.join("")}
+    </select>`
 }
