@@ -2,7 +2,8 @@
 // list of parks: https://developer.nps.gov/api/v1/parks?api_key=GtZH6PKdkUud9AMZrhhII6Ztg3sHJjAp3RTX3Ehh
 // park activities: https://developer.nps.gov/api/v1/activities?api_key=GtZH6PKdkUud9AMZrhhII6Ztg3sHJjAp3RTX3Ehh
 
-import { ParkList } from "./parks/parkList.js";
+// import { ParkList } from "./parks/parkList.js";
+import { Park } from "./parks/park.js";
 import { getParks, getStateArray, getStates } from "./parks/ParkDataManager.js";
 // import { EateryList } from "./eateries/eateryList.js";
 // import { getEateries } from "./eateries/EateryDataManager.js"
@@ -24,7 +25,7 @@ const buildStateList = (stateCode) => {
     .then(allAPIParks => {
         console.log('api', allAPIParks.data);
 
-        parkElement.innerHTML = ParkList(allAPIParks.data)
+        parkElement.innerHTML = Park(allAPIParks.data)
     })
 }
 

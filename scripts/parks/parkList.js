@@ -1,13 +1,13 @@
-import { park } from "./park.js";
+// import { Park } from "./park.js";
 
-export const ParkList = (allPark) => {
+// export const ParkList = (allPark) => {
 
-    let parkHTML = "";
+//     let parkHTML = "";
 
-    for(const onePark of allPark) {
+//     for(const onePark of allPark) {
 
-        parkHTML += park(onePark)
-    }
+//         parkHTML += park(onePark)
+//     }
 
-    return parkHTML;
-}
+//     return parkHTML;
+// }
