@@ -24,6 +24,7 @@ export const getParks = (stateCode) => {
     })
 }
 
+
 export const getParkArray = () => {
     return allParks;
 }
