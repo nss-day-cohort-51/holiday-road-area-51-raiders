@@ -3,7 +3,7 @@
 // park activities: https://developer.nps.gov/api/v1/activities?api_key=GtZH6PKdkUud9AMZrhhII6Ztg3sHJjAp3RTX3Ehh
 
 // import { ParkList } from "./parks/parkList.js";
-import { Park } from "./parks/park.js";
+import { Park, showParkDetails, parkDetailsButton } from "./parks/park.js";
 import { getParks, getStateArray, getStates } from "./parks/ParkDataManager.js";
 // import { EateryList } from "./eateries/eateryList.js";
 import { getEateries } from "./eateries/EateryDataManager.js"
@@ -18,6 +18,19 @@ mainElement.addEventListener("change", (event) => {
     if (event.target.id === "stateSelection"){
         console.log('target', event.target.value);
         buildStateList(event.target.value);
+    }
+})
+
+mainElement.addEventListener("change", (event) => {
+    if (event.target.id === "parkSelection"){
+        console.log("eyo?!", event.target.value)
+        console.log(showParkDetails(event.target.value))
+    }
+})
+
+mainElement.addEventListener("click", (event) => {
+    if (event.target.id === "previewButton"){
+        console.log("hehe lol")
     }
 })
 
