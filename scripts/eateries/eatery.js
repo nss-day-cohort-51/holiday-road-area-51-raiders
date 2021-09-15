@@ -9,13 +9,9 @@ export const showEatery = (eateryArray) => {
     </select>`
 }
 
-export const eateryDetailsButton = () => {
-    return `<button id="eatPreview">Details</button>`
-}
-
 export const showEateryDetails = (eateryid) => {
     //reference to preview area on DOM
-    const contentElement = document.querySelector("#preview")
+    const contentElement = document.querySelector("#previewEat")
 
    getSingleEatery(eateryid).then(response => {
         console.log(response)
