@@ -7,7 +7,7 @@ import { Park, showParkDetails, parkDetailsButton } from "./parks/park.js";
 import { getParks, getStateArray, getStates } from "./parks/ParkDataManager.js";
 // import { EateryList } from "./eateries/eateryList.js";
 import { getEateries } from "./eateries/EateryDataManager.js"
-import { showEatery } from "./eateries/eatery.js";
+import { showEatery, showEateryDetails } from "./eateries/eatery.js";
 // import { AttractionList } from "./attractions/attractionList.js"
 import { getAttractions } from "./attractions/AttractionDataManager.js"
 import { showStateList } from "./stateDropDown.js";
@@ -31,6 +31,21 @@ mainElement.addEventListener("change", (event) => {
 mainElement.addEventListener("click", (event) => {
     if (event.target.id === "previewButton"){
         console.log("hehe lol")
+    }
+})
+
+//Eat
+
+mainElement.addEventListener("change", (event) => {
+    if (event.target.id === "eaterySelection"){
+        console.log("blah!", event.target.value)
+        showEateryDetails(event.target.value)
+    }
+})
+
+mainElement.addEventListener("click", (event) => {
+    if (event.target.id === "previewButton"){
+        console.log("yumyum")
     }
 })
 
