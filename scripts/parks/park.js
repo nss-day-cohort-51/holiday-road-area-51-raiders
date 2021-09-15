@@ -9,21 +9,19 @@
 import { getParkArray } from "./ParkDataManager.js"
 
 export const Park = parkArray => {
+//portion of dropdown we'd like to loop
     const parkDropDown = parkArray.map(park => `<option value="${park.id}">${park.fullName}</option>`)
+//portion of dropdown that won't be looped. this will hold the looped portion using .join to string together all of the array objects
     return `<select id="parkSelection">Choose a Park
         <option value="none" selected disabled>Choose a Park</option>
         ${parkDropDown.join("")}
         </select>`
 }
 
-export const parkDetailsButton = () => {
-    return `<button id="parkPreview">Details</button>`
-}
-
 export const showParkDetails = (parkid) => {
-    //reference to preview area on DOM
+//reference to preview area on DOM
     const contentElement = document.querySelector("#preview")
-
+//filters through all parks for the ones with the selected id
     const filteredResult = getParkArray().data.filter(singlePark => {
         if (singlePark.id === parkid) {
             return singlePark

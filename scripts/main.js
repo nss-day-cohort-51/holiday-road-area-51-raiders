@@ -3,17 +3,18 @@
 // park activities: https://developer.nps.gov/api/v1/activities?api_key=GtZH6PKdkUud9AMZrhhII6Ztg3sHJjAp3RTX3Ehh
 
 // import { ParkList } from "./parks/parkList.js";
-import { Park, showParkDetails, parkDetailsButton } from "./parks/park.js";
+import { Park, showParkDetails, } from "./parks/park.js";
 import { getParks, getStateArray, getStates } from "./parks/ParkDataManager.js";
 // import { EateryList } from "./eateries/eateryList.js";
 import { getEateries } from "./eateries/EateryDataManager.js"
 import { showEatery } from "./eateries/eatery.js";
 // import { AttractionList } from "./attractions/attractionList.js"
-import { getAttractions } from "./attractions/AttractionDataManager.js"
+import {  getAttractions } from "./attractions/AttractionDataManager.js"
 import { showStateList } from "./stateDropDown.js";
-import { showAttraction } from "./attractions/attraction.js";
+import { showAttraction, showAttractionDetails } from "./attractions/attraction.js";
 
 const mainElement = document.querySelector("main");
+
 mainElement.addEventListener("change", (event) => {
     if (event.target.id === "stateSelection"){
         console.log('target', event.target.value);
@@ -28,9 +29,10 @@ mainElement.addEventListener("change", (event) => {
     }
 })
 
-mainElement.addEventListener("click", (event) => {
-    if (event.target.id === "previewButton"){
-        console.log("hehe lol")
+mainElement.addEventListener("change", (event) => {
+    if (event.target.id === "attSelection"){
+        console.log("weesnaw", event.target.value)
+        console.log(showAttractionDetails(event.target.value))
     }
 })
 
