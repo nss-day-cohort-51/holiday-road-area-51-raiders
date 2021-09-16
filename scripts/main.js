@@ -11,7 +11,7 @@ import { showEatery, showEateryDetails } from "./eateries/eatery.js";
 // import { AttractionList } from "./attractions/attractionList.js"
 import { getAttractions } from "./attractions/AttractionDataManager.js"
 import { showStateList } from "./stateDropDown.js";
-import { showAttraction } from "./attractions/attraction.js";
+import { showAttraction, showAttractionDetails } from "./attractions/attraction.js";
 
 const mainElement = document.querySelector("main");
 mainElement.addEventListener("change", (event) => {
@@ -40,6 +40,13 @@ mainElement.addEventListener("change", (event) => {
     if (event.target.id === "eaterySelection"){
         console.log("blah!", event.target.value)
         showEateryDetails(event.target.value)
+    }
+})
+
+mainElement.addEventListener("change", (event) => {
+    if (event.target.id === "attSelection"){
+        console.log("blah!", event.target.value)
+        showAttractionDetails(event.target.value)
     }
 })
 
