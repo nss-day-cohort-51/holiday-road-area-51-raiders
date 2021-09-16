@@ -28,3 +28,11 @@ export const getParks = (stateCode) => {
 export const getParkArray = () => {
     return allParks;
 }
+
+export const getSinglePark = (parkCode) => {
+    return fetch(`https://developer.nps.gov/api/v1/parks?parkCode=${parkCode}&api_key=GtZH6PKdkUud9AMZrhhII6Ztg3sHJjAp3RTX3Ehh`)
+    .then(response => response.json())
+    .then(apiStates => {
+        return apiStates.data;
+    })
+}

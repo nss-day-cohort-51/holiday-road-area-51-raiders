@@ -28,7 +28,7 @@ export const getWeatherapi = (parkid) => {
     const weatherElement = document.querySelector("#previewWeather")
 
     const filteredResult = getParkArray().data.filter(singlePark => {
-        if (singlePark.id === parkid) {
+        if (singlePark.parkCode === parkid) {
             return singlePark
         }
     })

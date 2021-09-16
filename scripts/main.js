@@ -15,6 +15,7 @@ import { showAttraction, showAttractionDetails } from "./attractions/attraction.
 import { saveTrip } from "./feed/DataManager.js";
 import { SaveTrip } from "./feed/SaveTrip.js";
 import { getWeatherapi } from "./weather/weather.js";
+import { showTrip } from "./feed/trip.js";
 
 const mainElement = document.querySelector("main");
 mainElement.addEventListener("change", (event) => {
@@ -129,15 +130,16 @@ mainElement.addEventListener("click", event => {
         const postObject = {
             state: state,
             park: park,
-            eatery: eatery,
-            attraction: attraction
+            eatery: parseInt(eatery),
+            attraction: parseInt(attraction)
         }
-        saveTrip(postObject)
+        saveTrip(postObject).then(response => {
+            showTrip();
+        })
 
     }
 })
 
 showSaveTrip();
-
-
+showTrip();
 startTrip();
