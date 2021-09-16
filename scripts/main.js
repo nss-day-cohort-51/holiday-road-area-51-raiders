@@ -12,6 +12,7 @@ import { showEatery, showEateryDetails } from "./eateries/eatery.js";
 import { getAttractions } from "./attractions/AttractionDataManager.js"
 import { showStateList } from "./stateDropDown.js";
 import { showAttraction, showAttractionDetails } from "./attractions/attraction.js";
+import { getWeatherapi } from "./weather/weather.js";
 
 const mainElement = document.querySelector("main");
 mainElement.addEventListener("change", (event) => {
@@ -25,6 +26,7 @@ mainElement.addEventListener("change", (event) => {
     if (event.target.id === "parkSelection"){
         console.log("eyo?!", event.target.value)
         console.log(showParkDetails(event.target.value))
+        getWeatherapi(event.target.value)
     }
 })
 
