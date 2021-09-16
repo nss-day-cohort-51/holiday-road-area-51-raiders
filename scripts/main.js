@@ -12,6 +12,8 @@ import { showEatery, showEateryDetails } from "./eateries/eatery.js";
 import { getAttractions } from "./attractions/AttractionDataManager.js"
 import { showStateList } from "./stateDropDown.js";
 import { showAttraction, showAttractionDetails } from "./attractions/attraction.js";
+import { saveTrip } from "./feed/DataManager.js";
+import { SaveTrip } from "./feed/SaveTrip.js";
 
 const mainElement = document.querySelector("main");
 mainElement.addEventListener("change", (event) => {
@@ -101,5 +103,39 @@ const startTrip = () => {
     }
     buildEateryDD();
 }
+
+const showSaveTrip = () => {
+    const entryElement = document.querySelector(".entryForm");
+    entryElement.innerHTML = SaveTrip();
+}
+
+mainElement.addEventListener("click", event => {
+    if (event.target.id === "saveTrip__cancel") {
+        //clear the input fields
+    }
+  })
+  
+  mainElement.addEventListener("click", event => {
+    event.preventDefault();
+    if (event.target.id === "saveTrip__submit") {
+        const state = document.querySelector("#stateSelection").value
+        console.log("state", state)
+        const park = document.querySelector("#parkSelection").value
+        const eatery = document.querySelector("#eaterySelection").value
+        const attraction = document.querySelector("#attSelection").value
+
+        const postObject = {
+            state: state,
+            park: park,
+            eatery: eatery,
+            attraction: attraction
+        }
+        saveTrip(postObject)
+
+    }
+})
+
+showSaveTrip();
+
 
 startTrip();

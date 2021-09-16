@@ -1,5 +1,49 @@
-{ "trips": [],
-  "states" : [
+{
+  "trips": [
+    {
+      "state": "AL",
+      "park": "99907F85-7E09-40FE-BF5E-A9AB7F09A7E2",
+      "eatery": "1",
+      "attraction": "2",
+      "id": 1
+    },
+    {
+      "state": "AL",
+      "park": "99907F85-7E09-40FE-BF5E-A9AB7F09A7E2",
+      "eatery": "1",
+      "attraction": "2",
+      "id": 2
+    },
+    {
+      "state": "AL",
+      "park": "99907F85-7E09-40FE-BF5E-A9AB7F09A7E2",
+      "eatery": "1",
+      "attraction": "1",
+      "id": 3
+    },
+    {
+      "state": "AL",
+      "park": "99907F85-7E09-40FE-BF5E-A9AB7F09A7E2",
+      "eatery": "2",
+      "attraction": "2",
+      "id": 4
+    },
+    {
+      "state": "AL",
+      "park": "FFEB6894-949B-4C17-924D-646B63966718",
+      "eatery": "6",
+      "attraction": "2",
+      "id": 5
+    },
+    {
+      "state": "AL",
+      "park": "FFEB6894-949B-4C17-924D-646B63966718",
+      "eatery": "6",
+      "attraction": "2",
+      "id": 6
+    }
+  ],
+  "states": [
     {
       "name": "Alabama",
       "code": "AL"
@@ -200,4 +244,5 @@
       "name": "Wyoming",
       "code": "WY"
     }
-  ]}
+  ]
+}
