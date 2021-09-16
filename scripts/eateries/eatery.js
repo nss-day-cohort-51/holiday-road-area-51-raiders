@@ -15,7 +15,7 @@ export const eateryDetailsButton = () => {
 
 export const showEateryDetails = (eateryid) => {
     //reference to preview area on DOM
-    const contentElement = document.querySelector("#preview")
+    const contentElement = document.querySelector("#previeweat")
 
    getSingleEatery(eateryid).then(response => {
         console.log(response)
