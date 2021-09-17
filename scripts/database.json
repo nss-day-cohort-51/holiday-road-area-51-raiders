@@ -20,6 +20,20 @@
       "eatery": 5,
       "attraction": 8,
       "id": 3
+    },
+    {
+      "state": "CA",
+      "park": "chis",
+      "eatery": 8,
+      "attraction": 7,
+      "id": 4
+    },
+    {
+      "state": "CO",
+      "park": "colm",
+      "eatery": 3,
+      "attraction": 9,
+      "id": 5
     }
   ],
   "states": [
