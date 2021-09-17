@@ -20,22 +20,18 @@ import { showTrip } from "./feed/trip.js";
 const mainElement = document.querySelector("main");
 mainElement.addEventListener("change", (event) => {
     if (event.target.id === "stateSelection"){
-        console.log('target', event.target.value);
         buildStateList(event.target.value);
     }
 })
 
 mainElement.addEventListener("change", (event) => {
     if (event.target.id === "parkSelection"){
-        console.log("eyo?!", event.target.value)
-        console.log(showParkDetails(event.target.value))
         getWeatherapi(event.target.value)
     }
 })
 
 mainElement.addEventListener("click", (event) => {
     if (event.target.id === "previewButton"){
-        console.log("hehe lol")
     }
 })
 
@@ -43,21 +39,18 @@ mainElement.addEventListener("click", (event) => {
 
 mainElement.addEventListener("change", (event) => {
     if (event.target.id === "eaterySelection"){
-        console.log("blah!", event.target.value)
         showEateryDetails(event.target.value)
     }
 })
 
 mainElement.addEventListener("change", (event) => {
     if (event.target.id === "attSelection"){
-        console.log("blah!", event.target.value)
         showAttractionDetails(event.target.value)
     }
 })
 
 mainElement.addEventListener("click", (event) => {
     if (event.target.id === "previewButton"){
-        console.log("yumyum")
     }
 })
 
@@ -65,7 +58,6 @@ const buildStateList = (stateCode) => {
     const parkElement = document.querySelector(".parkDisplay");
     getParks(stateCode)
     .then(allAPIParks => {
-        console.log('api', allAPIParks.data);
 
         parkElement.innerHTML = Park(allAPIParks.data)
     })
@@ -77,14 +69,12 @@ const buildEateryDD = () => {
     const eateryElement = document.querySelector(".eateryDisplay");
     getEateries()
     .then(allAPIEat => {
-        console.log('api', allAPIEat);
 
         eateryElement.innerHTML = showEatery(allAPIEat)
     })
     const attElement = document.querySelector(".attDisplay");
     getAttractions()
     .then(allAPIAtt => {
-        console.log('api', allAPIAtt);
 
         attElement.innerHTML = showAttraction(allAPIAtt)
     })
@@ -93,14 +83,11 @@ const buildEateryDD = () => {
 const startTrip = () => {
 
     const stateElement = document.querySelector(".stateDisplay")
-    console.log('stateDisplay', stateElement)
 
     if (getStateArray().length !== 0) {
-    console.log(getStateArray)
     stateElement.innerHTML = showStateList(getStateArray())
     } else {
         getStates().then(statesResults => {
-            console.log("states", statesResults)
             stateElement.innerHTML = showStateList(statesResults);
         })
     }
@@ -122,7 +109,6 @@ mainElement.addEventListener("click", event => {
     event.preventDefault();
     if (event.target.id === "saveTrip__submit") {
         const state = document.querySelector("#stateSelection").value
-        console.log("state", state)
         const park = document.querySelector("#parkSelection").value
         const eatery = document.querySelector("#eaterySelection").value
         const attraction = document.querySelector("#attSelection").value

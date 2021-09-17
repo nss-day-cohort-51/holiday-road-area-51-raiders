@@ -13,7 +13,6 @@ export const showAttractionDetails = (eateryid) => {
     const contentElement = document.querySelector("#previewAtt")
 
    getSingleAttraction(eateryid).then(response => {
-        console.log(response)
         contentElement.innerHTML = `<section class= "eatery" id="${response.id}">
         <h3>${response.name}</h3>
         <p>${response.city, response.state}</p>

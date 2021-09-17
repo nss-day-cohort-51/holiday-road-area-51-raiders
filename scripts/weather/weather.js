@@ -32,12 +32,9 @@ export const getWeatherapi = (parkid) => {
             return singlePark
         }
     })
-    console.log(filteredResult[0].addresses[0])
 
     let zip = filteredResult[0].addresses[0].postalCode
 
-    console.log(zip)
-    console.log(getWeather(zip))
     getWeather(zip).then(response => {
         weatherElement.innerHTML = WeatherList(response.list)
         console.log(response)

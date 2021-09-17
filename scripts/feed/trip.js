@@ -10,7 +10,6 @@ export const Trip = (park, att, eat) => {
 
 export const showTrip = () => {
     getTrips().then(response => {
-        console.log(response)
         TripList(response)
     })
 }

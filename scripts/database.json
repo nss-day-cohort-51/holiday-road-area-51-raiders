@@ -22,11 +22,18 @@
       "id": 3
     },
     {
-      "state": "CO",
-      "park": "none",
-      "eatery": 9,
-      "attraction": 8,
+      "state": "CA",
+      "park": "chis",
+      "eatery": 8,
+      "attraction": 7,
       "id": 4
+    },
+    {
+      "state": "CO",
+      "park": "colm",
+      "eatery": 3,
+      "attraction": 9,
+      "id": 5
     }
   ],
   "states": [
