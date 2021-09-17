@@ -29,7 +29,6 @@ export const showParkDetails = (parkid) => {
             return singlePark
         }
     })
-    console.log(filteredResult[0])
 //DOM object HTML
     contentElement.innerHTML = `<section class="park" id="${filteredResult[0].parkCode}">
             <h3>${filteredResult[0].fullName}</h3>
