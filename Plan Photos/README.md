@@ -4,7 +4,7 @@
 
 3 Users can get started on this app by selecting which state they want to travel to. 
 
-4 The group Area 51 Raiders and its members (Sydney Crawley, Tia Thomason, Isaiah Tapolcsanyi and LD Bartholomew) Contributed and maintain this project. LD Bartholomew helped with HTML, CSS and JavaScript. Sydney Crawley helped with the HTML, CSS, JavaScript, and the buttons. Tia Thomason helped with the Logo, Wireframe, and JavaScript. Isaiah Tapolcsanyi helped with the JavaScript and APIs. 
+4 The group Area 51 Raiders and its members (Sydney Crawley, Tia Thomason, Isaiah Tapolcsanyi and LD Bartholomew) Contributed and maintain this project. LD Bartholomew helped with HTML, CSS, ERD and JavaScript. Sydney Crawley helped with the HTML, CSS, ERD, JavaScript, and the buttons. Tia Thomason helped with the Logo, Wireframe, ERD, and JavaScript. Isaiah Tapolcsanyi helped with the ERD, JavaScript and APIs. 
 
 
 
