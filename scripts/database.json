@@ -20,6 +20,13 @@
       "eatery": 5,
       "attraction": 8,
       "id": 3
+    },
+    {
+      "state": "CO",
+      "park": "none",
+      "eatery": 9,
+      "attraction": 8,
+      "id": 4
     }
   ],
   "states": [

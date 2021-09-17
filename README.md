@@ -1,3 +1,23 @@
+1 This project allows the user to build a trip. The user can start by selecting a state, national park, eatery, and an attraction along the way. Once they made up their mind on the trip they can save their trip and be provided the weather for the next 5 days. 
+
+2 This app is useful to consolidate current travel information for travelers.
+
+3 Users can get started on this app by selecting which state they want to travel to. 
+
+4 The group Area 51 Raiders and its members (Sydney Crawley, Tia Thomason, Isaiah Tapolcsanyi and LD Bartholomew) Contributed and maintain this project. LD Bartholomew helped with HTML, CSS and JavaScript. Sydney Crawley helped with the HTML, CSS, JavaScript, and the buttons. Tia Thomason helped with the Logo, Wireframe, and JavaScript. Isaiah Tapolcsanyi helped with the JavaScript and APIs. 
+
+
+
+
+
+
+
+
+
+///////////////////////////
+
+
+
 # Holiday Road from Nashville
 
 You and your teammates have been contracted by the National Parks Service to build an application that will allow people to plan excursions for trips to our country's beautiful national parks. The starting point of each trip will be Nashville, TN with a national park destination and two other stops along the way. The additional stops will include one bizarrary and one Eatery.
